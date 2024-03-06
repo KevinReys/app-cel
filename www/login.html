@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#2196f3">
+    <title>Login</title>
+    <link rel="stylesheet" href="lib/framework7-bundle.min.css">
+    <link rel="stylesheet" href="css/personalizado.css">
+    <link rel="stylesheet" href="css/materialdesignicons.min.css">
+    <style>
+        /* Estilos para o contêiner */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2f2f2; /* Cor de fundo da página (cinza claro) */
+        }
+    
+        /* Estilos para o formulário */
+        .login-form {
+            width: 80%;
+            max-width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        /* Estilos para os campos de entrada */
+        .login-form input {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    
+        /* Estilos para o botão */
+        .login-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    
+        /* Estilos para mensagens de erro */
+        .error-message {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="view view-main">
+            <div class="page">
+                <!-- Initial Page, "data-name" contains page name -->
+                <div data-name="login" class="page color-theme-blue">
+                    <!-- Top Navbar -->
+                    <div class="navbar">
+                        <div class="navbar-bg"></div>
+                        <div class="navbar-inner justify-content-center">
+                            <div class="title">Login</div>
+                        </div>
+                    </div>
+
+                    <!-- Scrollable page content -->
+                    <div class="page-content">
+                        <div class="container">
+                            <form class="login-form" onsubmit="return loginUser()">
+                                <input type="text" id="username" placeholder="Usuário" required>
+                                <input type="password" id="password" placeholder="Senha" required>
+                                <button type="submit">Entrar</button>
+                                <div class="error-message" id="error-message"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Path to Framework7 Library Bundle JS-->
+    <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
+    <!-- jQuery -->
+    <script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>    
+    <!-- Roteamento do app-->
+    <script type="text/javascript" src="js/routes.js"></script>
+    <script src="cordova.js"></script>
+    <script>
+        // Lista de usuários válidos
+        var validUsers = [
+            { username: 'kevin', password: '123' },
+            { username: 'usuario2', password: 'senha2' },
+            // Adicione mais usuários conforme necessário
+        ];
+
+        // Função para validar o login
+        function loginUser() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            var isValidUser = validUsers.some(function (user) {
+                return user.username === username && user.password === password;
+            });
+
+            if (isValidUser) {
+                // Login bem-sucedido, redirecione para a página principal
+                app.views.main.router.navigate('/index/');
+            } else {
+                // Exibir mensagem de erro
+                document.getElementById('error-message').innerText = 'Usuário ou senha inválidos. Tente novamente.';
+            }
+
+            // Impede o envio do formulário
+            return false;
+        }
+    </script>
+</body>
+</html>
