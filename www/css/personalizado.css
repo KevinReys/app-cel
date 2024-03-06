@@ -1,25 +1,57 @@
-.toolbar{
-    height: 80px;
+.page {
+    background-color: #a8a3a3; /* Cor de fundo da página (cinza claro) */
+}
+/* Estilo para a barra de navegação (navbar) */
+.navbar {
+    height: 60px; /* Altura da barra de navegação */
+    background-color: #333; /* Cor de fundo da barra de navegação */
 }
 
-.tab-link{
+/* Fundo estilizado da barra de navegação */
+.navbar-bg {
+    background-color: #333; /* Cor de fundo da barra de navegação */
+}
+
+/* Estilo para o conteúdo interno da barra de navegação */
+.navbar-inner {
+    justify-content: center; /* Centralizar o conteúdo horizontalmente */
+    align-items: center; /* Centralizar o conteúdo verticalmente */
+}
+
+/* Estilo para o título dentro da barra de navegação */
+.navbar .title {
+    color:  #4CAF50; /* Cor do texto do título */
+    font-size: 1.5em; /* Tamanho do texto do título */
+    font-weight: bold; /* Negrito para o título */
+}
+
+
+.toolbar {
+    height: 80px;
+    background-color: #333; /* Cinza escuro para a barra de ferramentas */
+}
+
+.tab-link {
     display: flex;
     justify-content: center;
     flex-flow: column wrap;
 }
 
-.toolbar-inner .link{    
-    flex:1;
-    height: 80px;  
-    line-height: 25px; 
-	font-weight:bold;    
+.toolbar-inner .link {
+    flex: 1;
+    height: 80px;
+    line-height: 25px;
+    font-weight: bold;
+    color: #ffffff; /* Verde para os links ativos */
 }
 
-.toolbar-inner .link:not(.active){
-    color:gray;
-	font-weight:normal;
+.toolbar-inner .link:not(.active) {
+    color: #ffffff; /*  links inativos */
+    font-weight: normal;
 }
 
-.toolbar-inner > .link i{
+.toolbar-inner > .link i {
     font-size: 28px;
+    color: #4CAF50; /* Verde para os ícones */
 }
+
