@@ -1,42 +1,62 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <!-- Required meta tags-->
     <meta charset="utf-8">
     <meta name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <!-- Color theme for statusbar (Android only) -->
     <meta name="theme-color" content="#2196f3">
-    <!-- Your app title -->
-    <title>Template Tab</title>
-    <!-- Path to Framework7 Library Bundle CSS -->
+    <title>GymApp</title>
     <link rel="stylesheet" href="lib/framework7-bundle.min.css">
-    <!-- CSS PERSONALIZADO PARA MENU-->
     <link rel="stylesheet" href="css/personalizado.css">
-    <!--Ícones Material Design-->
     <link rel="stylesheet" href="css/materialdesignicons.min.css">
-
-
+    <style>
+        /* Estilos para o contêiner */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2f2f2; /* Cor de fundo da página (cinza claro) */
+            padding: 20px; /* Adicione um preenchimento ao redor do container */
+        }
+    
+        /* Estilos para as caixas quadradas */
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #4CAF50; /* Cor verde */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff; /* Cor do texto */
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 10px; /* Margem entre as caixas */
+        }
+    
+        /* Efeito de hover nas caixas */
+        .box:hover {
+            background-color: #45a049; /* Cor verde mais escura no hover */
+        }
+    </style>
+    
 </head>
-
 <body>
-    <!-- App root element -->
+    
     <div id="app">
-       
-        <!-- Your main view, should have "view-main" class -->
         <div class="view view-main">
-            
             <!-- TAB BAR-->
             <div class="toolbar toolbar-bottom">
                 <div class="toolbar-inner display-flex">
                     <a href="/index/" class="tab-link link active">
                         <i class="mdi mdi-home"></i>
-                        <span>Link 1</span>
+                        <span>Link1</span>
                     </a>
                     <a href="/link2/" class="tab-link link">
-                        <i class="mdi mdi-link"></i>
+                        <i class="mdi mdi-account"></i>
                         <span>Link 2</span>
                     </a>
                     <a href="/link3/" class="tab-link link">
@@ -44,12 +64,12 @@
                         <span>Link 3</span>
                     </a>
                     <a href="/link4/" class="tab-link link">
-                        <i class="mdi mdi-magnify"></i>
+                        <i class="mdi mdi-account"></i>
                         <span>Link 4</span>
                     </a>
-
                 </div>
             </div>
+            
 
             <!-- Initial Page, "data-name" contains page name -->
             <div data-name="index" class="page color-theme-blue">
@@ -62,15 +82,18 @@
                     </div>
                 </div>
 
+                
                 <!-- Scrollable page content -->
                 <div class="page-content">
                     <div class="block">
-                        <p>Exercícios Rafaela Andreazza</p>
+                        <p></p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+
     <!-- Path to Framework7 Library Bundle JS-->
     <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
 	<!-- jQuery -->
@@ -79,5 +102,4 @@
     <script type="text/javascript" src="js/routes.js"></script>
     <script src="cordova.js"></script>
 </body>
-
 </html>
