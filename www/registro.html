@@ -196,9 +196,25 @@
                 <button id="signin">Registrar</button>
             </form>
             <div id="registro">
-                <a href="#">Já possui uma conta? Faça login</a>
+                <a href="javascript:void(0);" onclick="voltarPagina()">Já possui uma conta? Faça login</a>
+            </div>
+        </section>
+
+        <!-- Adicione a seção de login (pode ser uma nova seção ou parte do mesmo HTML) -->
+        <section id="login" class="hidden">
+            <!-- Seu formulário de login e outros elementos -->
+
+            <div id="loginMessage">
+                <a href="#" id="registroLink">Ainda não tem uma conta? Registre-se</a>
             </div>
         </section>
     </main>
+
+    <script>
+        // Função para voltar para a página anterior
+        function voltarPagina() {
+            history.back();
+        }
+    </script>
 </body>
 </html>
