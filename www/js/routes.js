@@ -18,7 +18,26 @@ var app = new Framework7({
   // Add default routes
 
   routes: [
-
+    {
+      path: '/login/', //apelido
+      url: 'login.html', //arquivo que está relacionado ao path (apelido)
+      animate: false,
+	  on: { //controle de disparos de evento
+		pageBeforeIn: function (event, page) {
+		// fazer algo antes da página ser exibida
+		},
+		pageAfterIn: function (event, page) {
+		// fazer algo depois da página ser exibida
+		},
+		pageInit: function (event, page) {
+		// fazer algo quando a página for inicializada
+		},
+		pageBeforeRemove: function (event, page) {
+		// fazer algo antes da página ser removida do DOM
+		},
+	  }
+    },
+  
     {
       path: '/index/', //apelido
       url: 'index.html', //arquivo que está relacionado ao path (apelido)
