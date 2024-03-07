@@ -5,7 +5,7 @@
     <author email="kevinrsye@gmail.com" href="https://cordova.apache.org">
         Kevin Reys
     </author>
-    <content src="index.html" />
+    <content src="login.html" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
 </widget>
