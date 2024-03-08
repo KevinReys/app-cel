@@ -152,6 +152,16 @@
         .hidden {
             display: none;
         }
+        #title {
+    font-size: 2.25rem;
+    text-align: center;
+    margin: 0 auto; /* Adicione esta linha para centralizar horizontalmente */
+        }
+        #title2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: -25px;
+        }
     </style>
 </head>
 <body>
@@ -159,14 +169,7 @@
         <section id="log">
             <form id="form">
                 <h1 id="title">GiGaApp</h1>
-                <h3>Sistema de registro</h3>  
-                <div class="input-box">
-                    <label for="name">Nome</label>
-                    <div class="input-field">
-                        <i class="fa-solid fa-user"></i>
-                        <input type="text" id="name" required>
-                        <span></span>
-                    </div>
+                <h3 id="title2">Sistema de cadastro</h3>  
                 </div>
                 <div class="input-box">
                     <label for="email">E-mail</label>
@@ -177,23 +180,17 @@
                     </div>
                 </div>
                 <div class="input-box">
-                    <label for="phone">Telefone</label>
+                    <label for="password">Senha</label>
                     <div class="input-field">
-                        <i class="fa-solid fa-phone"></i>
-                        <input type="tel" id="phone" required>
+                        <i class="fa-solid fa-key"></i>
+                        <input type="password" id="senha" required>
                         <span></span>
                     </div>
                 </div>
-                <div class="input-box">
-                    <label for="birthdate">Data de Nascimento</label>
-                    <div class="input-field">
-                        <i class="fa-solid fa-calendar"></i>
-                        <input type="date" id="birthdate" required>
-                        <span></span>
-                    </div>
+                
                 </div>
                 <!-- Adicione outros campos conforme necessário -->
-                <button id="signin">Registrar</button>
+                <button id="signin">Cadastrar</button>
             </form>
             <div id="registro">
                 <a href="javascript:void(0);" onclick="voltarPagina()">Já possui uma conta? Faça login</a>
@@ -209,7 +206,6 @@
             </div>
         </section>
     </main>
-
     <script>
         // Função para voltar para a página anterior
         function voltarPagina() {
