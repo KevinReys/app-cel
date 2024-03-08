@@ -1,33 +1,55 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <!-- Required meta tags-->
     <meta charset="utf-8">
     <meta name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <!-- Color theme for statusbar (Android only) -->
     <meta name="theme-color" content="#2196f3">
-    <!-- Your app title -->
-    <title>My App</title>
-    <!-- Path to Framework7 Library Bundle CSS -->
+    <title>GiGaApp</title>
     <link rel="stylesheet" href="lib/framework7-bundle.min.css">
-    <!-- CSS PERSONALIZADO PARA MENU-->
     <link rel="stylesheet" href="css/personalizado.css">
-    <!--Ícones Material Design-->
     <link rel="stylesheet" href="css/materialdesignicons.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f0f0f0;
+        }
 
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
 
+        .box {
+            width: calc(33.33% - 20px);
+            margin: 10px;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .box {
+                width: calc(50% - 20px);
+            }
+        }
+    </style>
 </head>
-
 <body>
-    <!-- App root element -->
     <div id="app">
-
-        <!-- Your main view, should have "view-main" class -->
         <div class="view view-main">
-            <!-- Initial Page, "data-name" contains page name -->
             <div data-name="link4" class="page">
 
                 <!-- Top Navbar -->
@@ -37,6 +59,16 @@
                         <div class="title ">Link 4</div>
                     </div>
                 </div>
+                <br><br><br>
+                
+                
+               <!--conteudo aqui-->
+
+
+
+
+
+
 
                 <!-- Scrollable page content -->
                 <div class="page-content">
