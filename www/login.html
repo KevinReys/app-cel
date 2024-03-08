@@ -136,8 +136,7 @@ body {
     width: 15.5rem;
 }
 
-
-#registro a {
+#registro a { /* Registrar */
     color: #16a34a;
     display: flex;
     justify-content: center;
@@ -148,13 +147,24 @@ body {
     transition: color 0.5s;
 }
 
-#registro a:hover {
+#registro a:hover { /* efeito Registrar */
     color: white;
 }
 
 .hidden {
     display: none;
     
+}
+
+#title { /* GiGaApp */
+    font-size: 2.25rem;
+    text-align: center;
+    margin: 0 auto; 
+}
+#title2 { /* Sistema de login */
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: -25px;
 }
     </style>
     <title>Sistema de Login</title>
@@ -165,7 +175,7 @@ body {
         <section id="log">
             <form id="form">
                 <h1 id="title">GiGaApp</h1>
-                <h3>Sistema de login</h3>  
+                <h3 id="title2">Sistema de login</h3>  
                 <div class="input-box">
                     <label for="name">Usuário</label>
                     <div class="input-field">
